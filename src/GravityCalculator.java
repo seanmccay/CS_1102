@@ -1,5 +1,5 @@
 /**
- * Created by Administrator on 9/6/2016.
+ * Created by Sean McCay on 9/6/2016.
  */
 public class GravityCalculator {
 
@@ -9,7 +9,7 @@ public class GravityCalculator {
 
         double  initialVelocity = 0.0; // starting velocity of the object
 
-        double  fallingTime = 10.0; // time in seconds that the object falls
+        double  fallingTime = 5.0; // time in seconds that the object falls
 
         double  initialPosition = 1000.0; // Starting position in meters, the calculation will determine the ending position in meters
 
