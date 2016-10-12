@@ -6,16 +6,39 @@ package payrollsystem;
 
 public abstract class Employee {
     //Define class state
-    private String employeeId;
+    private int employeeId;
     private String name;
     private Vehicle  vehicle;
 
-    //getters and setters
-    public String getEmployeeId() {
+    public Employee(){
+        System.out.print("... inside default constructor");
+        employeeId = 0;
+        name = "";
+    }
+
+    public Employee(int tempEmployeeId, String tempName, Vehicle tempVehicle){
+        System.out.println("... inside of non-default Employee constructor.");
+        employeeId = tempEmployeeId;
+        name = tempName;
+        vehicle = tempVehicle;
+    }
+
+    public Employee(int tempEmployeeId, String tempName, String tempPlate, String tempColor){
+        System.out.println("... inside of non-default Employee constructor.");
+        employeeId = tempEmployeeId;
+        name = tempName;
+        this.vehicle = new Vehicle(tempPlate, tempColor);
+    }
+
+    public abstract double calculatePay();
+
+
+
+    public int getEmployeeId() {
         return employeeId;
     }
 
-    public void setEmployeeId(String employeeId) {
+    public void setEmployeeId(int employeeId) {
         this.employeeId = employeeId;
     }
 
@@ -34,6 +57,5 @@ public abstract class Employee {
     public void setVehicle(Vehicle vehicle) {
         this.vehicle = vehicle;
     }
-
 
 }
