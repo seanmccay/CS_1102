@@ -3,6 +3,7 @@ package payrollsystem;
 /**
  * Created by Sean McCay on 10/5/2016.
  */
+
 public abstract class Employee {
     //Define class state
     private String employeeId;
@@ -33,4 +34,6 @@ public abstract class Employee {
     public void setVehicle(Vehicle vehicle) {
         this.vehicle = vehicle;
     }
+
+
 }
